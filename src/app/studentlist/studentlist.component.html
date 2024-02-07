@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <div>
+        <button type="button" class="btn btn-primary" (click)="toRegister()">Add Student</button>
+    </div>
+    <div class="card">
+        <div class="card-heaer bg-dark text-white">
+            <h3>List of Students</h3>
+        </div>
+        <div class="card-body">
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Phone</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let s of students">
+                        <td>{{s.studentId}}</td>
+                        <td>{{s.firstName}}</td>
+                        <td>{{s.lastName}}</td>
+                        <td>{{s.email}}</td>
+                        <td>{{s.phone}}</td>
+                        <td>
+                            <a class="btn btn-primary" (click)="goToUpdate(s.studentId)">Change pass</a>
+                            <a class="btn btn-primary" (click)="showDetails(s.studentId)">Show details</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
