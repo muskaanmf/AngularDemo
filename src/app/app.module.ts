@@ -4,11 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { StudentlistComponent } from './studentlist/studentlist.component';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 import { ShowdetailsComponent } from './showdetails/showdetails.component';
 import { UpdatestudentComponent } from './updatestudent/updatestudent.component';
 import { FormsModule } from '@angular/forms';
 import { AddstudentComponent } from './addstudent/addstudent.component';
+import { EmailPatternDirective } from './directive/email-pattern.directive';
+import { MatchPasswordDirective } from './directive/match-password.directive';
+import { PasswordPatternDirective } from './directive/password-pattern.directive';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,16 @@ import { AddstudentComponent } from './addstudent/addstudent.component';
     ShowdetailsComponent,
     UpdatestudentComponent,
     AddstudentComponent,
+    EmailPatternDirective,
+    MatchPasswordDirective,
+    PasswordPatternDirective,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
